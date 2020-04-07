@@ -17,12 +17,12 @@
 
                 <!--Second column-->
                 <div class="col-md-2 mx-auto">
-                    <h5 class="title mb-4 mt-3 font-bold">Links</h5>
+                    <h5 class="title mb-4 mt-3 font-bold">FrontEnd</h5>
                     <ul>
-                        <li><a href="#!">Link 1</a></li>
-                        <li><a href="#!">Link 2</a></li>
-                        <li><a href="#!">Link 3</a></li>
-                        <li><a href="#!">Link 4</a></li>
+                        {{#each frontEndLinks}} 
+                        <li class="nav-item {{#if this.isActive}}active{{/if}}">
+                        <a class="nav-link" href="{{this.url}}">{{this.label}}</li>
+                        {{/each}}
                     </ul>
                 </div>
                 <!--/.Second column-->
@@ -31,12 +31,12 @@
 
                 <!--Third column-->
                 <div class="col-md-2 mx-auto">
-                    <h5 class="title mb-4 mt-3 font-bold">Links</h5>
+                    <h5 class="title mb-4 mt-3 font-bold">Bootstrap</h5>
                     <ul>
-                        <li><a href="#!">Link 1</a></li>
-                        <li><a href="#!">Link 2</a></li>
-                        <li><a href="#!">Link 3</a></li>
-                        <li><a href="#!">Link 4</a></li>
+                        {{#each bootstrapLinks}}
+                        <li class="nav-item {{#if this.isActive}}active{{/if}}">
+                        <a class="nav-link" href="{{this.url}}">{{this.label}}</li>
+                        {{/each}}
                     </ul>
                 </div>
                 <!--/.Third column-->
@@ -45,48 +45,18 @@
 
                 <!--Fourth column-->
                 <div class="col-md-2 mx-auto">
-                    <h5 class="title mb-4 mt-3 font-bold ">Links</h5>
+                    <h5 class="title mb-4 mt-3 font-bold ">React</h5>
                     <ul>
-                        <li><a href="#!">Link 1</a></li>
-                        <li><a href="#!">Link 2</a></li>
-                        <li><a href="#!">Link 3</a></li>
-                        <li><a href="#!">Link 4</a></li>
+                        {{#each reactLinks}}
+                        <li class="nav-item {{#if this.isActive}}active{{/if}}">
+                        <a class="nav-link" href="{{this.url}}">{{this.label}}</li>
+                        {{/each}}
                     </ul>
                 </div>
                 <!--/.Fourth column-->
             </div>
         </div>
         <!--/.Footer Links-->
-
-        <hr>
-
-        <!--Call to action-->
-        <div class="call-to-action">
-            <ul>
-                <li>
-                    <h5 class="mb-1">Register for free</h5>
-                </li>
-                <li><a href="" class="btn btn-danger btn-rounded">Sign up!</a></li>
-            </ul>
-        </div>
-        <!--/.Call to action-->
-
-        <hr>
-
-        <!--Social buttons-->
-        <div class="social-section text-center">
-            <ul>
-
-                <li><a class="btn-floating btn-sm btn-fb"><i class="fa fa-facebook"> </i></a></li>
-                <li><a class="btn-floating btn-sm btn-tw"><i class="fa fa-twitter"> </i></a></li>
-                <li><a class="btn-floating btn-sm btn-gplus"><i class="fa fa-google-plus"> </i></a></li>
-                <li><a class="btn-floating btn-sm btn-li"><i class="fa fa-linkedin"> </i></a></li>
-                <li><a class="btn-floating btn-sm btn-dribbble"><i class="fa fa-dribbble"> </i></a></li>
-
-            </ul>
-        </div>
-        <!--/.Social buttons-->
-
         <!--Copyright-->
         <div class="footer-copyright">
             <div class="container-fluid">

@@ -1,0 +1,64 @@
+.animation {
+    margin-top: 5rem ;
+    background-color: #A18383;
+    color: white;
+    text-align: center;
+    line-height: 1.5;
+    height: 350px;
+}
+
+.animation-text {
+    margin: auto;
+    width: 500px;
+    margin-top: 5rem;
+    position: relative;
+    animation-name: text;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+.animation-header {
+    margin: auto;
+    height: 50px;
+    position: relative;
+    animation: head;
+    animation-duration: 5s;
+    animation-fill-mode: forwards;
+}
+
+.animation-btn {
+    display: inline-block;
+    color: white;
+    background-color: #3C1414;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: white 1px solid;
+    margin-top: 5px;
+    opacity: 0;
+    animation-name: button;
+    animation-duration: 3s;
+    animation-delay: 2500ms;
+    animation-fill-mode: forwards;
+}
+
+@keyframes head {
+    0%{top: -50px}
+    50%{top: 90px}
+    57%{top: 90px; color: white;}
+    64%{top: 90px; color: red}
+    71%{top: 90px; color: white;}
+    77%{top: 90px; color: red}
+    84%{top: 90px; color: white;}
+    91%{top: 90px; color: red}
+    100%{top: 90px; color: white}
+}
+
+@keyframes text {
+    0%{left: -2000px}
+    100%{left: 0}
+}
+
+@keyframes button {
+    0%{opacity:0}
+    100%{opacity:1}
+}
