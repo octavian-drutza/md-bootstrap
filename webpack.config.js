@@ -13,6 +13,8 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
+const StylelintPlugin = require('stylelint-webpack-plugin');
+
 module.exports = (env, argv) => ({
   entry: [
     path.resolve(__dirname, 'src/js/index.js'),
@@ -142,6 +144,9 @@ module.exports = (env, argv) => ({
       },
     ]),
     new CleanWebpackPlugin(),
+    new StylelintPlugin({
+      configFile: path.resolve(__dirname, '.stylelintrc.json'),
+    }),
   ],
   optimization: {
     splitChunks: {
