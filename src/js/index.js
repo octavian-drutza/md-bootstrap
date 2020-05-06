@@ -19,3 +19,22 @@ import './fa';
 import './components/header/header';
 
 import './components/footer/footer';
+
+
+function handleReadMoreState() {
+  const state = sessionStorage.getItem('expanded');
+  if (!state) {
+    document.getElementById('dots').classList.toggle('hide');
+    document.getElementById('more').classList.toggle('hide');
+  }
+  return state;
+}
+
+document.querySelector('.animation-btn').addEventListener('click', () => {
+  if (handleReadMoreState()) {
+    sessionStorage.removeItem('expanded');
+    document.getElementById('more').classList.toggle('hide');
+  } else {
+    sessionStorage.setItem('expanded', 'true');
+  }
+});
